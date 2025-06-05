@@ -17,16 +17,16 @@ export const ButtonTextControlView = observer(
     rightButtons = [],
   }: ButtonTextControlViewProps) => (
     <div className="button-text-control">
-      {leftButtons.map((btn, i) => (
-        <Button key={i} {...btn} />
+      {leftButtons.map((btnProps, i) => (
+        <Button key={i} {...btnProps} />
       ))}
       <input
         type="text"
         value={viewModel.text}
         onChange={(e) => viewModel.setText(e.target.value)}
       />
-      {rightButtons.map((btn, i) => (
-        <Button key={i} {...btn} />
+      {rightButtons.map((btnProps, i) => (
+        <Button key={i} {...btnProps} />
       ))}
     </div>
   )
