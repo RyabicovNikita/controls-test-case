@@ -23,7 +23,7 @@ export class ButtonTextControlViewModel {
   }
 
   alertIfNumber = () => {
-    if (!isNaN(Number(this.text))) {
+    if (this.text && !isNaN(+this.text)) {
       alert(this.text);
     }
   }
